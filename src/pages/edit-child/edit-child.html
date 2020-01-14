@@ -1,0 +1,44 @@
+
+<ion-header>
+
+    <ion-navbar color="primary">
+      <ion-title>Edit</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding>
+  
+    <ion-item>
+      <ion-label>Child Name</ion-label>
+      <ion-input type="text" [(ngModel)]="mychild.name"> </ion-input>
+    </ion-item>
+  
+    
+    <ion-item>
+        <ion-label>Age</ion-label>
+        <ion-input type="number" [(ngModel)]="mychild.age"> </ion-input>
+      </ion-item>
+  
+  
+  
+      <ion-item>
+          <ion-label>Phone Number</ion-label>
+          <ion-input type="number" [(ngModel)]="mychild.phone"> </ion-input>
+        </ion-item>
+  
+  
+  
+        <ion-item>
+            <ion-label>School Name</ion-label>
+            <ion-input type="text" [(ngModel)]="mychild.school"> </ion-input>
+          </ion-item>
+  <br>
+  <br>
+  
+  
+          <button ion-button block (click)="EditChild()" >Edit</button>
+  
+  </ion-content>
+  

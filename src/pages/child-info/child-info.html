@@ -1,0 +1,28 @@
+
+<ion-header>
+
+  <ion-navbar color="primary">
+
+      <ion-buttons end  >
+          <button ion-button icon-only (click)="gotoAdd()">
+          <ion-icon name="add"></ion-icon> 
+      </button>
+        </ion-buttons>
+    <ion-title>Child-Info</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+<ion-item *ngFor="let Child of childrenlist" (click)="onItemClick(Child)">
+
+  <h2>Name: {{Child.name}}</h2>
+  <p>Age: {{Child.age}}</p>
+  <p>Phone: {{Child.phone}}</p>
+  <p>School: {{Child.school}}</p>
+</ion-item>
+
+
+</ion-content>

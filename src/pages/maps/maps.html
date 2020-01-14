@@ -1,0 +1,24 @@
+
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Map</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <agm-map [latitude]="childlocation.Latitude"
+  [longitude]="childlocation.Longitude"
+  [zoom]="15">
+  <agm-marker
+    *ngIf="locationset"
+    [latitude]="childlocation.Latitude"
+    [longitude]="childlocation.Longitude"></agm-marker>
+
+</agm-map>
+
+   
+</ion-content>

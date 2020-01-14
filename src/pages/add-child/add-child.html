@@ -1,0 +1,69 @@
+
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Add Child</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-item>
+    <ion-label>Child Name</ion-label>
+    <ion-input type="text" [(ngModel)]="mychild.name"> </ion-input>
+  </ion-item>
+
+  
+  <ion-item>
+      <ion-label>Age</ion-label>
+      <ion-input type="number" [(ngModel)]="mychild.age"> </ion-input>
+    </ion-item>
+
+
+
+    <ion-item>
+        <ion-label>Phone Number</ion-label>
+        <ion-input type="number" [(ngModel)]="mychild.phone"> </ion-input>
+      </ion-item>
+
+
+
+      <ion-item>
+          <ion-label>School Name</ion-label>
+          <ion-input type="text" [(ngModel)]="mychild.school"> </ion-input>
+        </ion-item>
+
+
+        <agm-map [latitude]="childlocation.Latitude"
+          [longitude]="childlocation.Longitude"
+          [zoom]="15"
+          (mapClick)="click($event)">
+
+
+
+          <agm-marker
+            *ngIf="locationset"
+            [latitude]="childlocation.Latitude"
+            [longitude]="childlocation.Longitude"></agm-marker>
+          
+
+        </agm-map>
+
+      
+        
+        <ion-row>
+          <ion-col col-6>
+            <button ion-button block [disabled] = "!locationset" color="secondary" (click)="setlocation()" >School Location</button>
+       
+          </ion-col>
+
+          <ion-col col-6>
+            <button ion-button block [disabled] = "!locationset" color="secondary" (click)="setlocation()" >Home  Location</button>
+        
+          </ion-col>
+        </ion-row>
+        <button ion-button block (click)="AddChild()" >Add</button>
+
+</ion-content>
